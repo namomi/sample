@@ -8,7 +8,11 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven {
+        url 'https://repo1.maven.org/maven2'
+    }
 }
+
 
 ext {
     junitVersion = '5.10.2'
@@ -53,6 +57,7 @@ dependencies {
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
 }
 
 test {
